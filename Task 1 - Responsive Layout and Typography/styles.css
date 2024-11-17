@@ -84,6 +84,8 @@ main{
     font-family: "Josefin Sans";
 }
 
+
+/* styling author section */
 .author{
     display: flex;
     border-bottom: 1px solid black;
@@ -133,6 +135,7 @@ footer{
         width: 80vw;
     }
 
+    /* making 3 rows of headings */
     .heading {
         float: left;
         width: 30%;
@@ -145,6 +148,11 @@ footer{
         clear: both;
     }
 
+    .heading p{
+        font-size: 1.3vw;
+    }
+
+    /* making grid for images */
     .images{
         display: grid;
         grid-template-columns: 1fr 1fr;
