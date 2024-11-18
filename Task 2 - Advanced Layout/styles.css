@@ -4,40 +4,333 @@
 /* Lato */
 @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 
-@media (min-width: 1024px){
-    .moviecontainer {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(5, 1fr);
-        gap: 2rem;
-        align-items: center;
-        text-align: center;
-    }
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: "Lato";
+    background-color: #231651;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #4DCCBD;
+    font-family: "Teko";
+}
+
+header h1{
+    font-size: 3em;   
+}
+
+.navbar{
+    display: flex;
+    gap: 16px;
+    font-family: "Lato";
+    font-size: 1em;
+    
+}
+
+.navbar a{
+    text-decoration: none;
+    color: #070410;
+    gap: 16px;
+    padding: 16px;
+}
+
+.search-bar button{
+    font-size: 2em;
+    background-color: #FFFFFF;
+    padding: 16px;
+    border-radius: 16px;
+}
+
+main {
+    font-family: "Lato";
+    padding: 16px;
+}
+
+.moviecontainer{
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    /* transform: translateX(-100px); */
+
+}
+
+h2, button{
+    font-family: "Teko";
+}
+
+
+
+@media (min-width:1024px) {
+
+.moviecard1, .moviecard2, .moviecard3, .moviecard4, .moviecard5, .moviecard6 {
+    background-color: #FFFF;
+    box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 0.6);
+    max-width: 900px;
+}
+
+.moviecard1{
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+}
+
+.moviedetails1{
+    padding: 16px;
+    display: flex;
+}
+
+.moviedetails1 h2{
+    padding-top: 16px;
+    font-size: 2em;
+    color: #070410;
+    padding-bottom: 16px;
+}
+
+.moviedetails1 p{
+    font-size: 1.5em;
+    width: 600px;
+}
+
+.moviedetails1 button{
+    font-size: 2em;
+    background-color: #4DCCBD;
+    color: #FFFFFF;
+    padding: 48px 48px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #070410;
+    margin-left: 48px;
+    margin-top: 48px;
+}
+
+.stretchimage img{
+    max-width: 900px;
+    width: 900px;
+    height: 400px;
+}
+
+
+.moviecontainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(200px, auto);
+    gap: 16px; 
+}
+
+.moviecard1 {
+    grid-column: span 2 / span 2;
+}
+
+.moviecard2 {
+    grid-row-start: 2;
+}
+
+.moviecard3 {
+    grid-row-start: 2;
+}
+
+.moviecard4 {
+    grid-column: span 2 / span 2;
+}
+
+.moviecard5 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 4;
+}
+
+.moviecard6 {
+    grid-column: span 2 / span 2;
+    grid-row-start: 5;
+}
         
-    .div1 {
+.moviecard1, .moviecard4, .moviecard5, .moviecard6 {
+    max-width: 900px;
+}
+
+.moviecard4, .moviecard5, .moviecard6{
+    max-height: 400px;
+}
+
+.moviedetails3{
+    padding: 16px;
+}
+
+.moviedetails3 h2{
+    font-size: 2em;
+}
+
+.moviedetails3 p{
+    font-size: 1.5em;
+    padding-bottom: 48px;
+}
+
+.moviedetails3 button{
+    font-size: 2em;
+    background-color: #4DCCBD;
+    color: #FFFFFF;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 420px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #070410;
+}
+
+.moviebox4, .moviebox5, .moviebox6{
+    display: flex;
+}
+
+.image img{
+    height: 400px;
+    width: 450px;
+}
+
+.moviecard2, .moviecard3{
+    padding-top: 0;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    width: 440px;
+}
+
+.moviedetails2{
+    padding: 16px;
+}
+
+.moviedetails2 h2{
+    font-size: 2em;
+    color: #070410;
+}
+
+.moviedetails2 p{
+    font-size: 1.5em;
+    width: 420px;
+    height: 330px;
+}
+
+.moviedetails2 button{
+    font-size: 2em;
+    background-color: #4DCCBD;
+    color: #FFFFFF;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    width: 420px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #070410;
+}
+
+.smallimage img{
+    width: 440px;
+    height: 300px;
+}
+
+.moviecard1{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+}
+/* mobile screen */
+
+@media (max-width:720px){
+    header{
+        max-width: 425px;
+    }
+    
+    h
+    .search-bar{
+        font-size: 2em;
+    }
+
+    .navbar{
+        display: none;
+    }
+
+    main{
+        max-width: 540px;
+        padding:0;
+    }
+
+    .moviecontainer{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .moviecard1, .moviecard2, .moviecard3, .moviecard4, .moviecard5, .moviecard6{
+        padding-top: 0;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+        gap: 16px;
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        height: 900px;
+        width: 100vw;
+    }
+    
+    .moviedetails1, .moviedetails2, .moviedetails3{
+        padding: 16px;
+    }
+    
+    .moviedetails1 h2, .moviedetails2 h2, .moviedetails3 h2{
+        font-size: 2em;
+        color: #070410;
+    }
+    
+    .moviedetails1 p, .moviedetails2 p, .moviedetails3 p{
+        font-size: 1.5em;
+        width: 88vw;
+        height: 280px;
+    }
+    
+    .moviedetails1 button, .moviedetails2 button, .moviedetails3 button{
+        font-size: 2em;
+        background-color: #4DCCBD;
+        color: #FFFFFF;
+        cursor: pointer;
+        border-radius: 10px;
+        border: 1px solid #070410;
         text-align: center;
-        grid-column: span 2 / span 2;
+        margin: auto;
+        width: 80vw;
+        margin-left: 16px;
+    }
+    
+    .stretchimage img{
+        width: 100vw;
     }
 
-    .div2 {
-        grid-row-start: 2;
+    .smallimage img{
+        width: 100vw;
     }
 
-    .div3 {
-        grid-row-start: 2;
+    .image img{
+        width: 100vw;
     }
 
-    .div4 {
-        grid-column: span 2 / span 2;
+    .moviecard1, .moviecard2, .moviecard3, .moviecard4, .moviecard5, .moviecard6 {
+        background-color: #FFFF;
     }
+}
 
-    .div5 {
-        grid-column: span 2 / span 2;
-        grid-row-start: 4;
-    }
-
-    .div6 {
-        grid-column: span 2 / span 2;
-        grid-row-start: 5;
+@media (max-width:321px){
+    .moviedetails1 button, .moviedetails2 button, .moviedetails3 button{
+        transform: translateY(50px);
     }
 }
